@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
+    <%= link_to "The 5k Charity", root_path, id: "logo" %>
     <nav>
     <div class="navbar-header">
     <button id="hamburger" type="button" class="navbar-toggle collapsed">
@@ -14,7 +14,8 @@
       class="nav navbar-nav navbar-right collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Donate", donate_path %></li>
         <% if logged_in? %>
           <li><%= link_to "Users", '#' %></li>
           <li class="dropdown">
