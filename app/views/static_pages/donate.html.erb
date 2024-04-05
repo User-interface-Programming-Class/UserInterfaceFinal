@@ -2,4 +2,9 @@
 <h1>Donate</h1>
 <p>
   Please Enter How Much You Would Like To Donate
+      <%= f.label :amount %>
+      <%= f.text_field :amount %>
+      
+      <%= f.submit "Donate", class: "btn btn-primary" %>
+      flash[:success] = "Thank you for donating!"
 </p>
