@@ -3,6 +3,9 @@ class StaticPagesController < ApplicationController
   end
 
   def donate
+    if (params[:button_clicked])
+      flash.now[:success] = "Thank you for donating!"
+    end
   end
   
   def about
