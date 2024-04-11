@@ -13,4 +13,8 @@ class User < ApplicationRecord
                                                     BCrypt::Engine.cost
       BCrypt::Password.create(string, cost: cost)
     end
+    validates :age, presence: true
+    validates :emergencyPhoneNumber, presence: true, length: {maximum: 12}
+    validates :teamName, presence: true
+
   end

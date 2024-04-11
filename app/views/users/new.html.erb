@@ -18,6 +18,16 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+      <%= f.label :emergencyPhoneNumber, "Emergency Phone Number" %>
+      <%= f.text_field :emergencyPhoneNumber, class: 'form-control' %>
+
+      <%= f.label :age %>
+      <%= f.text_field :age, class: 'form-control' %>
+
+
+      <%= f.label :teamName, "Team Name" %>
+      <%= f.text_field :teamName, class: 'form-control' %>
+
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>

@@ -7,7 +7,11 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: { user: { name:  "",
                                          email: "user@invalid",
                                          password:              "foo",
-                                         password_confirmation: "bar" } }
+                                         password_confirmation: "bar",
+                                         age:                   "hi",
+                                         emergencyPhoneNumber:  "morethanenoughcharacters",
+                                         teamName:              "123"
+                                          } }
     end
     assert_response :unprocessable_entity
     assert_template 'users/new'
@@ -19,7 +23,11 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: { user: { name:  "Example User",
                                          email: "user@example.com",
                                          password:              "password",
-                                         password_confirmation: "password" } }
+                                         password_confirmation: "password",
+                                         age:                   "25",
+                                         emergencyPhoneNumber:  "000-000-0000",
+                                         teamName:              "Runners"
+                                          } }
     end
     follow_redirect!
     assert_template 'users/show'
