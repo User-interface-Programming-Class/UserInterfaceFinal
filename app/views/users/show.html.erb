@@ -1,4 +1,5 @@
 <% provide(:title, @user.name) %>
+
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -6,6 +7,9 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <body>
+        The race begins at 11 AM and lasts all the way to 5 PM. In the middle, we have a lunch break provided at 1 PM.
+      </body>
     </section>
   </aside>
 </div>
