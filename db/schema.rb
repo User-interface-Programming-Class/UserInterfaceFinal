@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_11_203608) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "age"
+    t.string "address"
     t.string "emergencyPhoneNumber"
     t.string "teamName"
     t.index ["email"], name: "index_users_on_email", unique: true
