@@ -4,4 +4,5 @@ michael:
   password_digest: <%= User.digest('password') %>
   age: 25
   emergencyPhoneNumber: 451-465-5555
-  teamName: Runners
+  teamName: Runners  
+  admin: true
