@@ -9,4 +9,7 @@ User.create!(name:  "Example User",
              email: "example@railstutorial.org",
              password:              "foobar",
              password_confirmation: "foobar",
+             age: 20,
+             emergencyPhoneNumber: 1,
+             teamName: "The Bosses",
              admin: true)

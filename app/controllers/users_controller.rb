@@ -1,16 +1,22 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]  
-  before_action :admin_user,     only: :destroy
+  before_action :admin_user,     only: [:destroy, :promote]
 
   def index    
     @users = User.paginate(page: params[:page])
   end
-  
 
 def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
+    redirect_to users_url, status: :see_other
+  end
+
+  def promote    
+    @user = User.find(params[:id])
+    @user.admin = true
+    flash[:success] = "User promoted"
     redirect_to users_url, status: :see_other
   end
 
@@ -28,11 +34,7 @@ def destroy
       reset_session
       log_in @user
       flash[:success] = "Welcome to the Sample App!"
-      if current_user.admin?
-        redirect_to @user.admin
-      else
-        redirect_to @user
-      end
+      redirect_to @user
     else
       render 'new', status: :unprocessable_entity
     end
