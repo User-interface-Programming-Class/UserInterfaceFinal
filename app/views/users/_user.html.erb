@@ -5,7 +5,7 @@
     <%= link_to user.teamName, user %>,
     <%= link_to "DELETE", user, data: { "turbo-method": :delete,
                                         turbo_confirm: "You sure?" } %>,
-    <%= link_to "PROMOTE", user, data: { "turbo-method": :update,
+    <%= link_to "PROMOTE", user, data: { "turbo-method": :promote,
                                         turbo_confirm: "You sure?" } %>
   <% else %>
   <% if user.teamName == current_user.teamName %>
