@@ -14,12 +14,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_15_153811) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.integer "age"
+    t.integer "emergencyPhoneNumber"
+    t.string "teamName"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.string "age"
-    t.string "emergencyPhoneNumber"
-    t.string "teamName"
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end

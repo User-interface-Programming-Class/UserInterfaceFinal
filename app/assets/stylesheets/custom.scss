@@ -3,7 +3,7 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
+$dark-blue: #002366;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -15,6 +15,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-color: #F96C40;
 }
 
 section {
@@ -40,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  letter-spacing: 3px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -51,7 +52,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: $dark-blue;
 }
 
 p {
@@ -82,8 +83,8 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  border-top: 1px solid $gray-darker;
+  color: $gray-darker;
   a {
     color: $gray;
     &:hover {
