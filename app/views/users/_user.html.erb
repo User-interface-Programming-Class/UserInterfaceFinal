@@ -1,0 +1,17 @@
+<li>
+  <% if current_user.admin? && !current_user?(user) %>
+    <%= gravatar_for user, size: 50 %>
+    <%= link_to user.name, user %>,
+    <%= link_to user.teamName, user %>,
+    <%= link_to "DELETE", user, data: { "turbo-method": :delete,
+                                        turbo_confirm: "You sure?" } %>,
+    <%= link_to "PROMOTE", user, data: { "turbo-method": :promote,
+                                        turbo_confirm: "You sure?" } %>
+  <% else %>
+  <% if user.teamName == current_user.teamName %>
+    <%= gravatar_for user, size: 50 %>
+    <%= link_to user.name, user %>, 
+    <%= link_to user.teamName, user %>
+  <% end %>
+<% end %>
+</li>
