@@ -23,11 +23,8 @@ Run the app in the local server:
 ```
 $ rails server
 ```
-```
-$ git push origin master
-$ git add .
-$ git commit -m
-```
+
+
 This is a 5k Charity App made by Joseph Beasley, Wesley Cassel, Rachel Wyatt, Samantha Strutz Siegal
 
 Users can donate cash via our donate page and sign in via an email account. 
