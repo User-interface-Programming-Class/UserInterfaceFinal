@@ -18,7 +18,7 @@ $ rails db:migrate
 ```
 
 
-If the test suite passes, you'll be ready to run the app in a local server:
+Run the app in the local server:
 
 ```
 $ rails server
