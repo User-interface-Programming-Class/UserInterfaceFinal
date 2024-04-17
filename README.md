@@ -1,15 +1,5 @@
-# Ruby on Rails Tutorial sample application
+# Ruby on Rails 5K tutorial
 
-This is the sample application for the
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](https://www.railstutorial.org/)
-by [Michael Hartl](https://www.michaelhartl.com/).
-
-## License
-
-All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
 
 ## Getting started
 
@@ -27,17 +17,18 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-$ rails test
-```
 
 If the test suite passes, you'll be ready to run the app in a local server:
 
 ```
 $ rails server
 ```
+```
+$ git push origin master
+$ git add .
+$ git commit -m
+```
+This is a 5k Charity App made by Joseph Beasley, Wesley Cassel, Rachel Wyatt, Samantha Strutz Siegal
 
-For more information, see the
-[*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).# UserInterfaceFinal
+Users can donate cash via our donate page and sign in via an email account. 
+From there they can enter their name and team name, which will be included in a table on the race info page
